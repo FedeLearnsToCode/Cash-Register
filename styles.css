@@ -1,0 +1,364 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --red: #ff7782;
+  --purple: #7380ec;
+  --grey: #7d8da1; 
+  --green: #41f1b6;
+  --transparent-purple: rgba(115, 128, 236, 0.2);
+  --transparent-grey: rgba(125, 141, 161, 0.5);
+  --purple-hover: #8E9AF3;
+  --background: #f6f6f9;
+
+  --box-shadow: var(--spacing-xs) var(--spacing-xs) 0.9rem var(--transparent-grey);
+
+  --font-family-main: 'Poppins', sans-serif;
+  --font-size-xxs: 0.56rem;
+  --font-size-xs: 0.75rem;
+  --font-size-s: 0.87rem; 
+  --font-size-base: 1rem; 
+  --font-size-m: 1.25rem; 
+  --font-size-l: 1.87rem;  
+
+  --spacing-xs: 0.62rem;
+  --spacing-s: 0.9rem; 
+  --spacing-m: 1.25rem; 
+}
+
+.none {
+  display: none;
+}
+
+html{
+  font-size: 16px;
+}
+
+body {
+  width: 100%;
+  font-family: var(--font-family-main);
+  font-size: var(--font-size-base); 
+  font-weight: normal;
+  color: #333;
+  padding: var(--spacing-m);
+  background-color: var(--background);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  cursor: default;
+  overflow-x: hidden;
+}
+
+/* ----- SIDE BAR ------- */
+.logo {
+  display:flex;
+  flex-direction: row;
+  font-size: var(--font-size-s);
+}
+
+.fa-cash-register {
+  font-size: var(--font-size-l);
+  margin-right: var(--spacing-xs);
+  color: var(--red);
+}
+
+h1 span {
+  color: var(--red);
+}
+
+section {
+  width: 20vw;
+}
+
+.sidebar {
+  display:flex;
+  flex-direction: column;
+  padding: 1.87rem 0;
+  color: var(--grey);
+  font-weight: bold;
+}
+
+.sidebar a {
+  padding: var(--spacing-s) 0;
+  cursor: pointer;
+}
+
+a span {
+  display: inline-block;
+  text-align: center;
+  width: 2.5rem;  
+}
+
+.msg {
+  background-color: var(--red);
+  border-radius: 0.3rem;
+  color: #fff;
+  margin-left: var(--spacing-m);
+}
+
+.sidebar a:first-of-type, .sidebar a:hover {
+  background-color: var(--transparent-purple);
+  color: var(--purple);
+}
+
+.sidebar a:last-of-type {
+  margin-top: 3rem;
+}
+
+
+/* ----- MAIN ------- */
+
+main {
+  width: 70vw;
+  height: 100vh;
+}
+
+h2 {
+  font-weight: 900;
+}
+
+.data-input input {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.data-input {
+  background-color: var(--transparent-purple);
+  width: 9.5rem;
+  height: 1.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--spacing-xs);
+}
+
+/*------ TABLE -------*/
+.product-list {
+  width: 100%;
+  padding: var(--spacing-m) var(--spacing-xs);
+  background-color: #fff;
+  border-radius: var(--spacing-m);
+  margin: var(--spacing-xs) 0;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(var(--font-size-m), 5vw, clamp(--font-size-s)) !important;
+}
+
+.product-list table {
+  width: 100%;
+  text-align: center;
+}
+.product-list table td {
+  border-bottom: 1px solid var(--transparent-grey);
+}
+
+.product-list table tbody tr td{
+  padding: var(--spacing-xs) 0;
+  color: var(--grey);
+  font-weight: 600;
+}
+
+.product-list table tbody tr td:nth-of-type(4) {
+  color: var(--green);
+}
+
+th:nth-of-type(5), td:nth-of-type(5) {
+  cursor: pointer;
+}
+
+.warning {
+  color: var(--red) !important;
+}
+
+.product-list table tr td:last-of-type {
+  color: var(--purple);
+}
+
+.total {
+  text-align: center;
+  font-size: clamp(var(--font-size-m), 5vw, var(--font-size-xs)) !important;
+  font-weight: 700;
+  color: #000;
+}
+
+/* ----- CARDS ----- */
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: var(--spacing-m) 0;
+}
+
+.card {
+  background-color: #fff;
+  width: 32%;
+  border-radius: var(--spacing-m);
+  padding: var(--spacing-xs);
+  box-shadow: var(--box-shadow);
+}
+
+.icon-container {
+  width: 2.5rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--font-size-m);
+  color: #fff;
+}
+
+.card h3 {
+  font-size: var(--font-size-m);
+  padding: var(--spacing-xs) 0;
+}
+
+#cash {
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--font-size-base);
+  padding: 0 var(--spacing-xs);
+}
+
+.cards div:first-of-type .icon-container{
+    background-color: var(--purple);
+}
+
+.cards div:nth-of-type(2) {
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.cards div:nth-of-type(2) .icon-container{
+    background-color: var(--red);
+}
+
+.cards div:nth-of-type(3) .icon-container{
+    background-color: var(--green);
+}
+
+.cards div:nth-of-type(3) {
+  position: relative;
+}
+
+.circle {
+  position: absolute;
+  top:0;
+  right:0;
+  width: 5.62rem;  
+  height: 5.62rem;
+}
+
+.percent-container {
+  position: relative;
+  width: 6.2rem;  
+  height: 6.2rem;
+}
+
+.percent {
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: var(--font-size-s);
+}
+
+svg circle {
+  fill: none;
+  stroke: var(--purple);
+  stroke-width: 10;
+  stroke-linecap: round;
+  transform: translate(0.5rem, 0.5rem);
+  stroke-dasharray: 200;
+  stroke-dashoffset: -30;
+}
+
+.credit {
+  font-size: var(--font-size-xxs);
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacing-m);
+}
+
+/* ----- BUTTON ----- */
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-xs) 0;
+}
+
+#purchase-btn {
+  background-color: var(--purple);
+  color: #fff;
+  border: none;
+  border-radius: var(--spacing-m);
+  font-family: 'Poppins', sans-serif;
+  padding: var(--spacing-xs) var(--spacing-m);
+  cursor: pointer;
+}
+
+#purchase-btn:hover {
+  background-color: var(--purple-hover);
+}
+
+/* ----- RESPONSIVE MOBILE ----- */
+
+@media screen and (max-width: 48em) {
+  main {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .hamburger-wrapper{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 20;
+    cursor: pointer;
+  }
+
+  .nav-section{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: #f6f6f9;
+    padding: 1rem;
+    z-index: 10;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .nav-section.hide {
+    transform: translateX(0);
+  }
+
+  .product-list {
+    width: 100%;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .card{
+    width: 100%;
+    min-height: 10rem;
+    padding: var(--spacing-m);
+  }
+}
+

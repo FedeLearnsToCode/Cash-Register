@@ -1,0 +1,185 @@
+<!-- SISTEMARE ACCESSIBILITA' -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cash Register</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <section class="nav-section">
+      <!-- LOGO -->
+      <div class="logo">
+        <div><i class="fa-solid fa-cash-register"></i></div>
+        <h1>CA<span>SH</span> REGIST<span>ER</span></h1>
+      </div>
+
+      <!-- SIDE MENU -->
+      <nav class="sidebar">
+        <a
+          ><span><i class="fa-solid fa-solar-panel"></i></span>
+          Dashboard
+        </a>
+        <a
+          ><span><i class="fa-regular fa-user"></i></span> Customers</a
+        >
+        <a
+          ><span><i class="fa-regular fa-newspaper"></i></span> Orders</a
+        >
+        <a
+          ><span><i class="fa-solid fa-chart-line"></i></span> Analytics</a
+        >
+        <a
+          ><span><i class="fa-regular fa-envelope"></i></span> Messages<span
+            class="msg"
+            >10</span
+          ></a
+        >
+        <a
+          ><span><i class="fa-solid fa-list"></i></span> Products</a
+        >
+        <a
+          ><span><i class="fa-regular fa-lightbulb"></i></span> Reports</a
+        >
+        <a
+          ><span><i class="fa-solid fa-gear"></i></span> Settings</a
+        >
+        <a
+          ><span><i class="fa-solid fa-plus"></i></span> Add Product</a
+        >
+        <a
+          ><span> <i class="fa-solid fa-arrow-right-from-bracket"></i></span>
+          Logout</a
+        >
+      </nav>
+    </section>
+
+    <!-- MAIN -->
+    <main>
+      <div class="hamburger-wrapper hide">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <h2>Dashboard</h2>
+      <div class="data-input">
+        <label for="data"></label>
+        <input type="date" id="data" name="data" />
+      </div>
+      <div class="product-list">
+        <table>
+          <thead>
+            <tr>
+              <th>Product Name</th>
+              <th>Product Number</th>
+              <th>Price</th>
+              <th>Status</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Product 1585</td>
+              <td>1585</td>
+              <td>$ <span class="price"></span></td>
+              <td class="warning">To order</td>
+              <td>Details</td>
+            </tr>
+            <tr>
+              <td>Product 8596</td>
+              <td>8596</td>
+              <td>$ <span class="price"></span></td>
+              <td>16pz</td>
+              <td>Details</td>
+            </tr>
+            <tr>
+              <td>Product 356</td>
+              <td>356</td>
+              <td>$ <span class="price"></span></td>
+              <td>10pz</td>
+              <td>Details</td>
+            </tr>
+            <tr>
+              <td>Product 2378</td>
+              <td>2378</td>
+              <td>$ <span class="price"></span></td>
+              <td>To order</td>
+              <td>Details</td>
+            </tr>
+            <tr>
+              <td>Product 998</td>
+              <td>998</td>
+              <td>$ <span class="price"></span></td>
+              <td class="warning">To order</td>
+              <td>Details</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="fw-bold total">TOTAL $ <span id="totalPrice"></span></p>
+      </div>
+
+      <div class="cards">
+        <!-- CARD 1 -->
+        <div class="card">
+          <div class="icon-container">
+            <i class="fa-solid fa-dollar-sign"></i>
+          </div>
+          <h3><label for="cash">Money received</label><br /></h3>
+          <input type="number" id="cash" placeholder="Enter cash..." />
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="card">
+          <div class="icon-container">
+            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+          </div>
+          <h3>Change due</h3>
+          <div id="change-due"></div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="card">
+          <div class="icon-container">
+            <i class="fa-regular fa-chart-bar"></i>
+          </div>
+          <div class="circle">
+            <div class="percent-container">
+              <p class="percent">80%</p>
+
+              <svg>
+                <circle cx="38" cy="38" r="25"></circle>
+              </svg>
+            </div>
+          </div>
+          <h3>Total Sales</h3>
+          <h2>$ 189.50</h2>
+        </div>
+      </div>
+
+      <div class="btn-container">
+        <button id="purchase-btn" class="top-button">PURCHASE</button>
+      </div>
+      <div class="credit">
+        <p>
+          Design by EGATOR - Youtube video "Responsive Admin Dashboard Using
+          HTML CSS & JavaScript with Light & Dark Mode"
+        </p>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
