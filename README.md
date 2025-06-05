@@ -26,7 +26,7 @@ This app simulates a real-life cash register: it takes a total price and cash in
 
 ### Links
 
-- Live Site URL: [Live Demo on GitHub Pages](https://your-username.github.io/cash-register-app)
+- Live Site URL: ([https://your-username.github.io/cash-register-app](https://fedelearnstocode.github.io/Cash-Register/))
 
 ---
 
